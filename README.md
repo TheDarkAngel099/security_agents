@@ -73,7 +73,7 @@ pip install -r backend/requirements.txt
 pip install streamlit pandas requests
 ```
 
-### 3. Run the System
+### 3. Run the System (Local)
 
 You need to run the Backend and Frontend in separate terminals.
 
@@ -86,6 +86,17 @@ uvicorn backend.app.main:app --reload --port 8000
 ```bash
 streamlit run streamlit_app/streamlit_app.py
 ```
+
+### 3b. Run with Docker 🐳
+
+Ensure you have Docker and Docker Compose installed.
+
+1.  Set your Groq API Key in `.env` (or export it in your shell).
+2.  Run:
+    ```bash
+    GROQ_API_KEY=your_key_here docker-compose up --build
+    ```
+3.  Access the app at **http://localhost:8501**.
 
 ### 4. Access the App
 Open your browser to: **http://localhost:8501**

@@ -16,3 +16,8 @@ logs/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Database
+*.db
+*.sqlite3
+sql_aoo.db

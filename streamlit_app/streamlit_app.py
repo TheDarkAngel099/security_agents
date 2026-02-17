@@ -4,8 +4,10 @@ import requests
 # Set page config
 st.set_page_config(page_title="Security Agent Portal", page_icon="🛡️", layout="wide")
 
+import os
+
 # API Config
-API_URL = "http://localhost:8000/api"
+API_URL = os.getenv("API_URL", "http://localhost:8000/api")
 
 def init_session_state():
     if "token" not in st.session_state:
