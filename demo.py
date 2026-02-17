@@ -143,6 +143,15 @@ def main():
         "logs": [],
     })
 
+
+    run_scenario("Data Leak - Override to Security", {
+        "input_text": "Hey, the production database password is SuperSecret123 and the API key is sk-abc123xyz.",
+        "sender": "frank@company.com",
+        "recipient": "external-vendor@gmail.com",
+        "user_action": "Override",
+        "logs": [],
+    })
+
     print(f"\n{'█' * 70}")
     print(f"  ALL SCENARIOS COMPLETE — Logs saved in: {LOG_DIR}")
     print(f"{'█' * 70}\n")
